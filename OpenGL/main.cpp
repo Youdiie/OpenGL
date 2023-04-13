@@ -1,14 +1,8 @@
-//
-//  main.cpp
-//  OpenGL
-//
-//  Created by 김유진 on 2023/04/10.
-//
+#include "1_Hello_Triangle/base.hpp"
 
-#include <iostream>
+using hello_triangle::render;
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
+int main() {
+    int result = render();
+    return result;
 }
