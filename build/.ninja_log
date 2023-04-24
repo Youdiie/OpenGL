@@ -1,0 +1,23 @@
+# ninja log v5
+19	677	1682303454400827994	CMakeFiles/Learn-OpenGL.dir/src/1.Getting-Started/1.3.Shaders.cpp.o	c12877066d5863e8
+6144	6313	1682303197777470000	external/glfw/src/libglfw3.a	fd7d7e10713c265c
+3881	4634	1682303196084706830	external/glfw/src/CMakeFiles/glfw.dir/egl_context.c.o	e61a9139ebc7fd5d
+11	6143	1682303197591331563	external/glfw/src/CMakeFiles/glfw.dir/cocoa_window.m.o	450a5e8f047a9fa8
+7	6091	1682303197542144299	external/glfw/src/CMakeFiles/glfw.dir/cocoa_init.m.o	94f2d849725390bc
+677	978	1682303454705688327	Learn-OpenGL	b5edadbd68727882
+3867	6067	1682303197515211919	external/glfw/src/CMakeFiles/glfw.dir/nsgl_context.m.o	8052bbd49a039984
+7	6079	1682303197529610584	external/glfw/src/CMakeFiles/glfw.dir/cocoa_joystick.m.o	8aedf04d0f28fef4
+6	3908	1682303195308319087	external/glfw/src/CMakeFiles/glfw.dir/vulkan.c.o	d76308a2d0eac853
+7	3925	1682303195344148579	external/glfw/src/CMakeFiles/glfw.dir/window.c.o	843991833ea0876b
+4	3881	1682303195317936461	external/glfw/src/CMakeFiles/glfw.dir/context.c.o	771ac790d8fd44a9
+5	3928	1682303195377630906	external/glfw/src/CMakeFiles/glfw.dir/input.c.o	99e91cfbb5d5e8d4
+366	3913	1682303195322012656	external/glfw/src/CMakeFiles/glfw.dir/cocoa_time.c.o	6d0436243e7ce99c
+4	2734	1682303194149521385	CMakeFiles/Learn-OpenGL.dir/src/2.4.Lighting-Maps.cpp.o	d4b9ee5873da2c14
+3897	4621	1682303196078691435	external/glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.o	b9df05a6fe73afb6
+9	6136	1682303197588283719	external/glfw/src/CMakeFiles/glfw.dir/cocoa_monitor.m.o	562bb2bb22dfd100
+6	3905	1682303195321611816	external/glfw/src/CMakeFiles/glfw.dir/monitor.c.o	ce7827e866d50fa0
+5	3897	1682303195310490458	external/glfw/src/CMakeFiles/glfw.dir/init.c.o	cf1206c69efeb62a
+2737	3864	1682303195299837066	external/glfw/src/CMakeFiles/glfw.dir/posix_thread.c.o	e49c5192a2168c16
+19	368	1682303454090744947	CMakeFiles/Learn-OpenGL.dir/external/glad/src/glad.c.o	bb3ec088b698eb5e
+19	621	1682303498919764774	CMakeFiles/Learn-OpenGL.dir/src/1.Getting-Started/1.2.Hello-Triangle.cpp.o	982a41bcc4ede8eb
+622	891	1682303499193284609	Learn-OpenGL	ae28cbe23e4a90c0
