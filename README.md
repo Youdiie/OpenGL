@@ -25,11 +25,11 @@ $ git submodule update --init --recursive
 - Update Libraries Tag
 ```commandline
 # GLFW
-$ cd external/glfw
+$ cd externals/glfw
 $ git checkout tags/3.3.8
 
 # GLM
-$ cd external/glm
+$ cd externals/glm
 $ git checkout tags/0.9.9.8
 
 # ASSIMP

@@ -39,7 +39,7 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = /Users/gim-yujin/Desktop/learn-opengl/build/
+cmake_ninja_workdir = /Users/gim-yujin/Desktop/Refer/OpenGL/build/
 # =============================================================================
 # Object build statements for EXECUTABLE target Learn-OpenGL
 
@@ -49,17 +49,17 @@ cmake_ninja_workdir = /Users/gim-yujin/Desktop/learn-opengl/build/
 
 build cmake_object_order_depends_target_Learn-OpenGL: phony || cmake_object_order_depends_target_glfw
 
-build CMakeFiles/Learn-OpenGL.dir/external/glad/src/glad.c.o: C_COMPILER__Learn-OpenGL_unscanned_Debug /Users/gim-yujin/Desktop/learn-opengl/external/glad/src/glad.c || cmake_object_order_depends_target_Learn-OpenGL
-  DEP_FILE = CMakeFiles/Learn-OpenGL.dir/external/glad/src/glad.c.o.d
+build CMakeFiles/Learn-OpenGL.dir/externals/glad/src/glad.c.o: C_COMPILER__Learn-OpenGL_unscanned_Debug /Users/gim-yujin/Desktop/Refer/OpenGL/externals/glad/src/glad.c || cmake_object_order_depends_target_Learn-OpenGL
+  DEP_FILE = CMakeFiles/Learn-OpenGL.dir/externals/glad/src/glad.c.o.d
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk
-  INCLUDES = -I/Users/gim-yujin/Desktop/learn-opengl/external/glad/include -I/Users/gim-yujin/Desktop/learn-opengl/external/glfw -I/Users/gim-yujin/Desktop/learn-opengl/external/glfw/include -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/System/Library/Frameworks
+  INCLUDES = -I/Users/gim-yujin/Desktop/Refer/OpenGL/externals/glad/include -I/Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw -I/Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/include -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/System/Library/Frameworks
   OBJECT_DIR = CMakeFiles/Learn-OpenGL.dir
-  OBJECT_FILE_DIR = CMakeFiles/Learn-OpenGL.dir/external/glad/src
+  OBJECT_FILE_DIR = CMakeFiles/Learn-OpenGL.dir/externals/glad/src
 
-build CMakeFiles/Learn-OpenGL.dir/src/1.Getting-Started/1.2.Hello-Triangle.cpp.o: CXX_COMPILER__Learn-OpenGL_unscanned_Debug /Users/gim-yujin/Desktop/learn-opengl/src/1.Getting-Started/1.2.Hello-Triangle.cpp || cmake_object_order_depends_target_Learn-OpenGL
+build CMakeFiles/Learn-OpenGL.dir/src/1.Getting-Started/1.2.Hello-Triangle.cpp.o: CXX_COMPILER__Learn-OpenGL_unscanned_Debug /Users/gim-yujin/Desktop/Refer/OpenGL/src/1.Getting-Started/1.2.Hello-Triangle.cpp || cmake_object_order_depends_target_Learn-OpenGL
   DEP_FILE = CMakeFiles/Learn-OpenGL.dir/src/1.Getting-Started/1.2.Hello-Triangle.cpp.o.d
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk
-  INCLUDES = -I/Users/gim-yujin/Desktop/learn-opengl/external/glad/include -I/Users/gim-yujin/Desktop/learn-opengl/external/glfw -I/Users/gim-yujin/Desktop/learn-opengl/external/glfw/include -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/System/Library/Frameworks
+  INCLUDES = -I/Users/gim-yujin/Desktop/Refer/OpenGL/externals/glad/include -I/Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw -I/Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/include -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/System/Library/Frameworks
   OBJECT_DIR = CMakeFiles/Learn-OpenGL.dir
   OBJECT_FILE_DIR = CMakeFiles/Learn-OpenGL.dir/src/1.Getting-Started
 
@@ -71,9 +71,9 @@ build CMakeFiles/Learn-OpenGL.dir/src/1.Getting-Started/1.2.Hello-Triangle.cpp.o
 #############################################
 # Link the executable Learn-OpenGL
 
-build Learn-OpenGL: CXX_EXECUTABLE_LINKER__Learn-OpenGL_Debug CMakeFiles/Learn-OpenGL.dir/external/glad/src/glad.c.o CMakeFiles/Learn-OpenGL.dir/src/1.Getting-Started/1.2.Hello-Triangle.cpp.o | /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/System/Library/Frameworks/OpenGL.framework/OpenGL.tbd external/glfw/src/libglfw3.a || external/glfw/src/libglfw3.a
+build Learn-OpenGL: CXX_EXECUTABLE_LINKER__Learn-OpenGL_Debug CMakeFiles/Learn-OpenGL.dir/externals/glad/src/glad.c.o CMakeFiles/Learn-OpenGL.dir/src/1.Getting-Started/1.2.Hello-Triangle.cpp.o | /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/System/Library/Frameworks/OpenGL.framework/OpenGL.tbd externals/glfw/src/libglfw3.a || externals/glfw/src/libglfw3.a
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk
-  LINK_LIBRARIES = /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/System/Library/Frameworks/OpenGL.framework/OpenGL.tbd  external/glfw/src/libglfw3.a  -framework Cocoa  -framework IOKit  -framework CoreFoundation
+  LINK_LIBRARIES = /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/System/Library/Frameworks/OpenGL.framework/OpenGL.tbd  externals/glfw/src/libglfw3.a  -framework Cocoa  -framework IOKit  -framework CoreFoundation
   OBJECT_DIR = CMakeFiles/Learn-OpenGL.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -85,7 +85,7 @@ build Learn-OpenGL: CXX_EXECUTABLE_LINKER__Learn-OpenGL_Debug CMakeFiles/Learn-O
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/gim-yujin/Desktop/learn-opengl/build && /opt/homebrew/Cellar/cmake/3.26.0/bin/ccmake -S/Users/gim-yujin/Desktop/learn-opengl -B/Users/gim-yujin/Desktop/learn-opengl/build
+  COMMAND = cd /Users/gim-yujin/Desktop/Refer/OpenGL/build && /opt/homebrew/Cellar/cmake/3.26.0/bin/ccmake -S/Users/gim-yujin/Desktop/Refer/OpenGL -B/Users/gim-yujin/Desktop/Refer/OpenGL/build
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
@@ -97,7 +97,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/gim-yujin/Desktop/learn-opengl/build && /opt/homebrew/Cellar/cmake/3.26.0/bin/cmake --regenerate-during-build -S/Users/gim-yujin/Desktop/learn-opengl -B/Users/gim-yujin/Desktop/learn-opengl/build
+  COMMAND = cd /Users/gim-yujin/Desktop/Refer/OpenGL/build && /opt/homebrew/Cellar/cmake/3.26.0/bin/cmake --regenerate-during-build -S/Users/gim-yujin/Desktop/Refer/OpenGL -B/Users/gim-yujin/Desktop/Refer/OpenGL/build
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -115,7 +115,7 @@ build list_install_components: phony
 # Utility command for install
 
 build CMakeFiles/install.util: CUSTOM_COMMAND all
-  COMMAND = cd /Users/gim-yujin/Desktop/learn-opengl/build && /opt/homebrew/Cellar/cmake/3.26.0/bin/cmake -P cmake_install.cmake
+  COMMAND = cd /Users/gim-yujin/Desktop/Refer/OpenGL/build && /opt/homebrew/Cellar/cmake/3.26.0/bin/cmake -P cmake_install.cmake
   DESC = Install the project...
   pool = console
   restat = 1
@@ -127,7 +127,7 @@ build install: phony CMakeFiles/install.util
 # Utility command for install/local
 
 build CMakeFiles/install/local.util: CUSTOM_COMMAND all
-  COMMAND = cd /Users/gim-yujin/Desktop/learn-opengl/build && /opt/homebrew/Cellar/cmake/3.26.0/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  COMMAND = cd /Users/gim-yujin/Desktop/Refer/OpenGL/build && /opt/homebrew/Cellar/cmake/3.26.0/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
   DESC = Installing only the local directory...
   pool = console
   restat = 1
@@ -139,7 +139,7 @@ build install/local: phony CMakeFiles/install/local.util
 # Utility command for install/strip
 
 build CMakeFiles/install/strip.util: CUSTOM_COMMAND all
-  COMMAND = cd /Users/gim-yujin/Desktop/learn-opengl/build && /opt/homebrew/Cellar/cmake/3.26.0/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  COMMAND = cd /Users/gim-yujin/Desktop/Refer/OpenGL/build && /opt/homebrew/Cellar/cmake/3.26.0/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
   DESC = Installing the project stripped...
   pool = console
   restat = 1
@@ -148,98 +148,92 @@ build install/strip: phony CMakeFiles/install/strip.util
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# /Users/gim-yujin/Desktop/learn-opengl/CMakeLists.txt
+# /Users/gim-yujin/Desktop/Refer/OpenGL/CMakeLists.txt
 # =============================================================================
 
 
 #############################################
 # Utility command for uninstall
 
-build external/glfw/uninstall: phony external/glfw/CMakeFiles/uninstall
+build externals/glfw/uninstall: phony externals/glfw/CMakeFiles/uninstall
 
 
 #############################################
 # Utility command for edit_cache
 
-build external/glfw/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/gim-yujin/Desktop/learn-opengl/build/external/glfw && /opt/homebrew/Cellar/cmake/3.26.0/bin/ccmake -S/Users/gim-yujin/Desktop/learn-opengl -B/Users/gim-yujin/Desktop/learn-opengl/build
+build externals/glfw/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/gim-yujin/Desktop/Refer/OpenGL/build/externals/glfw && /opt/homebrew/Cellar/cmake/3.26.0/bin/ccmake -S/Users/gim-yujin/Desktop/Refer/OpenGL -B/Users/gim-yujin/Desktop/Refer/OpenGL/build
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
 
-build external/glfw/edit_cache: phony external/glfw/CMakeFiles/edit_cache.util
+build externals/glfw/edit_cache: phony externals/glfw/CMakeFiles/edit_cache.util
 
 
 #############################################
 # Utility command for rebuild_cache
 
-build external/glfw/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/gim-yujin/Desktop/learn-opengl/build/external/glfw && /opt/homebrew/Cellar/cmake/3.26.0/bin/cmake --regenerate-during-build -S/Users/gim-yujin/Desktop/learn-opengl -B/Users/gim-yujin/Desktop/learn-opengl/build
+build externals/glfw/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/gim-yujin/Desktop/Refer/OpenGL/build/externals/glfw && /opt/homebrew/Cellar/cmake/3.26.0/bin/cmake --regenerate-during-build -S/Users/gim-yujin/Desktop/Refer/OpenGL -B/Users/gim-yujin/Desktop/Refer/OpenGL/build
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
 
-build external/glfw/rebuild_cache: phony external/glfw/CMakeFiles/rebuild_cache.util
+build externals/glfw/rebuild_cache: phony externals/glfw/CMakeFiles/rebuild_cache.util
 
 
 #############################################
 # Utility command for list_install_components
 
-build external/glfw/list_install_components: phony
+build externals/glfw/list_install_components: phony
 
 
 #############################################
 # Utility command for install
 
-build external/glfw/CMakeFiles/install.util: CUSTOM_COMMAND external/glfw/all
-  COMMAND = cd /Users/gim-yujin/Desktop/learn-opengl/build/external/glfw && /opt/homebrew/Cellar/cmake/3.26.0/bin/cmake -P cmake_install.cmake
+build externals/glfw/CMakeFiles/install.util: CUSTOM_COMMAND externals/glfw/all
+  COMMAND = cd /Users/gim-yujin/Desktop/Refer/OpenGL/build/externals/glfw && /opt/homebrew/Cellar/cmake/3.26.0/bin/cmake -P cmake_install.cmake
   DESC = Install the project...
   pool = console
   restat = 1
 
-build external/glfw/install: phony external/glfw/CMakeFiles/install.util
+build externals/glfw/install: phony externals/glfw/CMakeFiles/install.util
 
 
 #############################################
 # Utility command for install/local
 
-build external/glfw/CMakeFiles/install/local.util: CUSTOM_COMMAND external/glfw/all
-  COMMAND = cd /Users/gim-yujin/Desktop/learn-opengl/build/external/glfw && /opt/homebrew/Cellar/cmake/3.26.0/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+build externals/glfw/CMakeFiles/install/local.util: CUSTOM_COMMAND externals/glfw/all
+  COMMAND = cd /Users/gim-yujin/Desktop/Refer/OpenGL/build/externals/glfw && /opt/homebrew/Cellar/cmake/3.26.0/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
   DESC = Installing only the local directory...
   pool = console
   restat = 1
 
-build external/glfw/install/local: phony external/glfw/CMakeFiles/install/local.util
+build externals/glfw/install/local: phony externals/glfw/CMakeFiles/install/local.util
 
 
 #############################################
 # Utility command for install/strip
 
-build external/glfw/CMakeFiles/install/strip.util: CUSTOM_COMMAND external/glfw/all
-  COMMAND = cd /Users/gim-yujin/Desktop/learn-opengl/build/external/glfw && /opt/homebrew/Cellar/cmake/3.26.0/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+build externals/glfw/CMakeFiles/install/strip.util: CUSTOM_COMMAND externals/glfw/all
+  COMMAND = cd /Users/gim-yujin/Desktop/Refer/OpenGL/build/externals/glfw && /opt/homebrew/Cellar/cmake/3.26.0/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
   DESC = Installing the project stripped...
   pool = console
   restat = 1
 
-build external/glfw/install/strip: phony external/glfw/CMakeFiles/install/strip.util
+build externals/glfw/install/strip: phony externals/glfw/CMakeFiles/install/strip.util
 
 
 #############################################
-# Custom command for external/glfw/CMakeFiles/uninstall
+# Custom command for externals/glfw/CMakeFiles/uninstall
 
-build external/glfw/CMakeFiles/uninstall | ${cmake_ninja_workdir}external/glfw/CMakeFiles/uninstall: CUSTOM_COMMAND
-  COMMAND = cd /Users/gim-yujin/Desktop/learn-opengl/build/external/glfw && /opt/homebrew/Cellar/cmake/3.26.0/bin/cmake -P /Users/gim-yujin/Desktop/learn-opengl/build/external/glfw/cmake_uninstall.cmake
+build externals/glfw/CMakeFiles/uninstall | ${cmake_ninja_workdir}externals/glfw/CMakeFiles/uninstall: CUSTOM_COMMAND
+  COMMAND = cd /Users/gim-yujin/Desktop/Refer/OpenGL/build/externals/glfw && /opt/homebrew/Cellar/cmake/3.26.0/bin/cmake -P /Users/gim-yujin/Desktop/Refer/OpenGL/build/externals/glfw/cmake_uninstall.cmake
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# /Users/gim-yujin/Desktop/learn-opengl/external/glfw/CMakeLists.txt
+# /Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/CMakeLists.txt
 # =============================================================================
-
-
-#############################################
-# Utility command for update_mappings
-
-build external/glfw/src/update_mappings: phony external/glfw/src/CMakeFiles/update_mappings
 
 # =============================================================================
 # Object build statements for STATIC_LIBRARY target glfw
@@ -248,127 +242,175 @@ build external/glfw/src/update_mappings: phony external/glfw/src/CMakeFiles/upda
 #############################################
 # Order-only phony target for glfw
 
-build cmake_object_order_depends_target_glfw: phony || external/glfw/src/CMakeFiles/glfw.dir
+build cmake_object_order_depends_target_glfw: phony || externals/glfw/src/CMakeFiles/glfw.dir
 
-build external/glfw/src/CMakeFiles/glfw.dir/context.c.o: C_COMPILER__glfw_unscanned_Debug /Users/gim-yujin/Desktop/learn-opengl/external/glfw/src/context.c || cmake_object_order_depends_target_glfw
-  DEFINES = -D_GLFW_USE_CONFIG_H
-  DEP_FILE = external/glfw/src/CMakeFiles/glfw.dir/context.c.o.d
-  FLAGS = -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -fPIC -Wall
-  INCLUDES = -I/Users/gim-yujin/Desktop/learn-opengl/external/glad/include -I/Users/gim-yujin/Desktop/learn-opengl/external/glfw/include -I/Users/gim-yujin/Desktop/learn-opengl/external/glfw/src -I/Users/gim-yujin/Desktop/learn-opengl/build/external/glfw/src
-  OBJECT_DIR = external/glfw/src/CMakeFiles/glfw.dir
-  OBJECT_FILE_DIR = external/glfw/src/CMakeFiles/glfw.dir
+build externals/glfw/src/CMakeFiles/glfw.dir/context.c.o: C_COMPILER__glfw_unscanned_Debug /Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/src/context.c || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_COCOA
+  DEP_FILE = externals/glfw/src/CMakeFiles/glfw.dir/context.c.o.d
+  FLAGS = -g -std=c99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -fPIC -Wall
+  INCLUDES = -I/Users/gim-yujin/Desktop/Refer/OpenGL/externals/glad/include -I/Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/include -I/Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/src -I/Users/gim-yujin/Desktop/Refer/OpenGL/build/externals/glfw/src
+  OBJECT_DIR = externals/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = externals/glfw/src/CMakeFiles/glfw.dir
 
-build external/glfw/src/CMakeFiles/glfw.dir/init.c.o: C_COMPILER__glfw_unscanned_Debug /Users/gim-yujin/Desktop/learn-opengl/external/glfw/src/init.c || cmake_object_order_depends_target_glfw
-  DEFINES = -D_GLFW_USE_CONFIG_H
-  DEP_FILE = external/glfw/src/CMakeFiles/glfw.dir/init.c.o.d
-  FLAGS = -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -fPIC -Wall
-  INCLUDES = -I/Users/gim-yujin/Desktop/learn-opengl/external/glad/include -I/Users/gim-yujin/Desktop/learn-opengl/external/glfw/include -I/Users/gim-yujin/Desktop/learn-opengl/external/glfw/src -I/Users/gim-yujin/Desktop/learn-opengl/build/external/glfw/src
-  OBJECT_DIR = external/glfw/src/CMakeFiles/glfw.dir
-  OBJECT_FILE_DIR = external/glfw/src/CMakeFiles/glfw.dir
+build externals/glfw/src/CMakeFiles/glfw.dir/init.c.o: C_COMPILER__glfw_unscanned_Debug /Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/src/init.c || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_COCOA
+  DEP_FILE = externals/glfw/src/CMakeFiles/glfw.dir/init.c.o.d
+  FLAGS = -g -std=c99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -fPIC -Wall
+  INCLUDES = -I/Users/gim-yujin/Desktop/Refer/OpenGL/externals/glad/include -I/Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/include -I/Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/src -I/Users/gim-yujin/Desktop/Refer/OpenGL/build/externals/glfw/src
+  OBJECT_DIR = externals/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = externals/glfw/src/CMakeFiles/glfw.dir
 
-build external/glfw/src/CMakeFiles/glfw.dir/input.c.o: C_COMPILER__glfw_unscanned_Debug /Users/gim-yujin/Desktop/learn-opengl/external/glfw/src/input.c || cmake_object_order_depends_target_glfw
-  DEFINES = -D_GLFW_USE_CONFIG_H
-  DEP_FILE = external/glfw/src/CMakeFiles/glfw.dir/input.c.o.d
-  FLAGS = -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -fPIC -Wall
-  INCLUDES = -I/Users/gim-yujin/Desktop/learn-opengl/external/glad/include -I/Users/gim-yujin/Desktop/learn-opengl/external/glfw/include -I/Users/gim-yujin/Desktop/learn-opengl/external/glfw/src -I/Users/gim-yujin/Desktop/learn-opengl/build/external/glfw/src
-  OBJECT_DIR = external/glfw/src/CMakeFiles/glfw.dir
-  OBJECT_FILE_DIR = external/glfw/src/CMakeFiles/glfw.dir
+build externals/glfw/src/CMakeFiles/glfw.dir/input.c.o: C_COMPILER__glfw_unscanned_Debug /Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/src/input.c || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_COCOA
+  DEP_FILE = externals/glfw/src/CMakeFiles/glfw.dir/input.c.o.d
+  FLAGS = -g -std=c99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -fPIC -Wall
+  INCLUDES = -I/Users/gim-yujin/Desktop/Refer/OpenGL/externals/glad/include -I/Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/include -I/Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/src -I/Users/gim-yujin/Desktop/Refer/OpenGL/build/externals/glfw/src
+  OBJECT_DIR = externals/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = externals/glfw/src/CMakeFiles/glfw.dir
 
-build external/glfw/src/CMakeFiles/glfw.dir/monitor.c.o: C_COMPILER__glfw_unscanned_Debug /Users/gim-yujin/Desktop/learn-opengl/external/glfw/src/monitor.c || cmake_object_order_depends_target_glfw
-  DEFINES = -D_GLFW_USE_CONFIG_H
-  DEP_FILE = external/glfw/src/CMakeFiles/glfw.dir/monitor.c.o.d
-  FLAGS = -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -fPIC -Wall
-  INCLUDES = -I/Users/gim-yujin/Desktop/learn-opengl/external/glad/include -I/Users/gim-yujin/Desktop/learn-opengl/external/glfw/include -I/Users/gim-yujin/Desktop/learn-opengl/external/glfw/src -I/Users/gim-yujin/Desktop/learn-opengl/build/external/glfw/src
-  OBJECT_DIR = external/glfw/src/CMakeFiles/glfw.dir
-  OBJECT_FILE_DIR = external/glfw/src/CMakeFiles/glfw.dir
+build externals/glfw/src/CMakeFiles/glfw.dir/monitor.c.o: C_COMPILER__glfw_unscanned_Debug /Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/src/monitor.c || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_COCOA
+  DEP_FILE = externals/glfw/src/CMakeFiles/glfw.dir/monitor.c.o.d
+  FLAGS = -g -std=c99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -fPIC -Wall
+  INCLUDES = -I/Users/gim-yujin/Desktop/Refer/OpenGL/externals/glad/include -I/Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/include -I/Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/src -I/Users/gim-yujin/Desktop/Refer/OpenGL/build/externals/glfw/src
+  OBJECT_DIR = externals/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = externals/glfw/src/CMakeFiles/glfw.dir
 
-build external/glfw/src/CMakeFiles/glfw.dir/vulkan.c.o: C_COMPILER__glfw_unscanned_Debug /Users/gim-yujin/Desktop/learn-opengl/external/glfw/src/vulkan.c || cmake_object_order_depends_target_glfw
-  DEFINES = -D_GLFW_USE_CONFIG_H
-  DEP_FILE = external/glfw/src/CMakeFiles/glfw.dir/vulkan.c.o.d
-  FLAGS = -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -fPIC -Wall
-  INCLUDES = -I/Users/gim-yujin/Desktop/learn-opengl/external/glad/include -I/Users/gim-yujin/Desktop/learn-opengl/external/glfw/include -I/Users/gim-yujin/Desktop/learn-opengl/external/glfw/src -I/Users/gim-yujin/Desktop/learn-opengl/build/external/glfw/src
-  OBJECT_DIR = external/glfw/src/CMakeFiles/glfw.dir
-  OBJECT_FILE_DIR = external/glfw/src/CMakeFiles/glfw.dir
+build externals/glfw/src/CMakeFiles/glfw.dir/platform.c.o: C_COMPILER__glfw_unscanned_Debug /Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/src/platform.c || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_COCOA
+  DEP_FILE = externals/glfw/src/CMakeFiles/glfw.dir/platform.c.o.d
+  FLAGS = -g -std=c99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -fPIC -Wall
+  INCLUDES = -I/Users/gim-yujin/Desktop/Refer/OpenGL/externals/glad/include -I/Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/include -I/Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/src -I/Users/gim-yujin/Desktop/Refer/OpenGL/build/externals/glfw/src
+  OBJECT_DIR = externals/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = externals/glfw/src/CMakeFiles/glfw.dir
 
-build external/glfw/src/CMakeFiles/glfw.dir/window.c.o: C_COMPILER__glfw_unscanned_Debug /Users/gim-yujin/Desktop/learn-opengl/external/glfw/src/window.c || cmake_object_order_depends_target_glfw
-  DEFINES = -D_GLFW_USE_CONFIG_H
-  DEP_FILE = external/glfw/src/CMakeFiles/glfw.dir/window.c.o.d
-  FLAGS = -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -fPIC -Wall
-  INCLUDES = -I/Users/gim-yujin/Desktop/learn-opengl/external/glad/include -I/Users/gim-yujin/Desktop/learn-opengl/external/glfw/include -I/Users/gim-yujin/Desktop/learn-opengl/external/glfw/src -I/Users/gim-yujin/Desktop/learn-opengl/build/external/glfw/src
-  OBJECT_DIR = external/glfw/src/CMakeFiles/glfw.dir
-  OBJECT_FILE_DIR = external/glfw/src/CMakeFiles/glfw.dir
+build externals/glfw/src/CMakeFiles/glfw.dir/vulkan.c.o: C_COMPILER__glfw_unscanned_Debug /Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/src/vulkan.c || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_COCOA
+  DEP_FILE = externals/glfw/src/CMakeFiles/glfw.dir/vulkan.c.o.d
+  FLAGS = -g -std=c99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -fPIC -Wall
+  INCLUDES = -I/Users/gim-yujin/Desktop/Refer/OpenGL/externals/glad/include -I/Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/include -I/Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/src -I/Users/gim-yujin/Desktop/Refer/OpenGL/build/externals/glfw/src
+  OBJECT_DIR = externals/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = externals/glfw/src/CMakeFiles/glfw.dir
 
-build external/glfw/src/CMakeFiles/glfw.dir/cocoa_init.m.o: C_COMPILER__glfw_unscanned_Debug /Users/gim-yujin/Desktop/learn-opengl/external/glfw/src/cocoa_init.m || cmake_object_order_depends_target_glfw
-  DEFINES = -D_GLFW_USE_CONFIG_H
-  DEP_FILE = external/glfw/src/CMakeFiles/glfw.dir/cocoa_init.m.o.d
-  FLAGS = -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -fPIC -Wall
-  INCLUDES = -I/Users/gim-yujin/Desktop/learn-opengl/external/glad/include -I/Users/gim-yujin/Desktop/learn-opengl/external/glfw/include -I/Users/gim-yujin/Desktop/learn-opengl/external/glfw/src -I/Users/gim-yujin/Desktop/learn-opengl/build/external/glfw/src
-  OBJECT_DIR = external/glfw/src/CMakeFiles/glfw.dir
-  OBJECT_FILE_DIR = external/glfw/src/CMakeFiles/glfw.dir
+build externals/glfw/src/CMakeFiles/glfw.dir/window.c.o: C_COMPILER__glfw_unscanned_Debug /Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/src/window.c || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_COCOA
+  DEP_FILE = externals/glfw/src/CMakeFiles/glfw.dir/window.c.o.d
+  FLAGS = -g -std=c99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -fPIC -Wall
+  INCLUDES = -I/Users/gim-yujin/Desktop/Refer/OpenGL/externals/glad/include -I/Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/include -I/Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/src -I/Users/gim-yujin/Desktop/Refer/OpenGL/build/externals/glfw/src
+  OBJECT_DIR = externals/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = externals/glfw/src/CMakeFiles/glfw.dir
 
-build external/glfw/src/CMakeFiles/glfw.dir/cocoa_joystick.m.o: C_COMPILER__glfw_unscanned_Debug /Users/gim-yujin/Desktop/learn-opengl/external/glfw/src/cocoa_joystick.m || cmake_object_order_depends_target_glfw
-  DEFINES = -D_GLFW_USE_CONFIG_H
-  DEP_FILE = external/glfw/src/CMakeFiles/glfw.dir/cocoa_joystick.m.o.d
-  FLAGS = -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -fPIC -Wall
-  INCLUDES = -I/Users/gim-yujin/Desktop/learn-opengl/external/glad/include -I/Users/gim-yujin/Desktop/learn-opengl/external/glfw/include -I/Users/gim-yujin/Desktop/learn-opengl/external/glfw/src -I/Users/gim-yujin/Desktop/learn-opengl/build/external/glfw/src
-  OBJECT_DIR = external/glfw/src/CMakeFiles/glfw.dir
-  OBJECT_FILE_DIR = external/glfw/src/CMakeFiles/glfw.dir
+build externals/glfw/src/CMakeFiles/glfw.dir/egl_context.c.o: C_COMPILER__glfw_unscanned_Debug /Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/src/egl_context.c || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_COCOA
+  DEP_FILE = externals/glfw/src/CMakeFiles/glfw.dir/egl_context.c.o.d
+  FLAGS = -g -std=c99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -fPIC -Wall
+  INCLUDES = -I/Users/gim-yujin/Desktop/Refer/OpenGL/externals/glad/include -I/Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/include -I/Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/src -I/Users/gim-yujin/Desktop/Refer/OpenGL/build/externals/glfw/src
+  OBJECT_DIR = externals/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = externals/glfw/src/CMakeFiles/glfw.dir
 
-build external/glfw/src/CMakeFiles/glfw.dir/cocoa_monitor.m.o: C_COMPILER__glfw_unscanned_Debug /Users/gim-yujin/Desktop/learn-opengl/external/glfw/src/cocoa_monitor.m || cmake_object_order_depends_target_glfw
-  DEFINES = -D_GLFW_USE_CONFIG_H
-  DEP_FILE = external/glfw/src/CMakeFiles/glfw.dir/cocoa_monitor.m.o.d
-  FLAGS = -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -fPIC -Wall
-  INCLUDES = -I/Users/gim-yujin/Desktop/learn-opengl/external/glad/include -I/Users/gim-yujin/Desktop/learn-opengl/external/glfw/include -I/Users/gim-yujin/Desktop/learn-opengl/external/glfw/src -I/Users/gim-yujin/Desktop/learn-opengl/build/external/glfw/src
-  OBJECT_DIR = external/glfw/src/CMakeFiles/glfw.dir
-  OBJECT_FILE_DIR = external/glfw/src/CMakeFiles/glfw.dir
+build externals/glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.o: C_COMPILER__glfw_unscanned_Debug /Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/src/osmesa_context.c || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_COCOA
+  DEP_FILE = externals/glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.o.d
+  FLAGS = -g -std=c99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -fPIC -Wall
+  INCLUDES = -I/Users/gim-yujin/Desktop/Refer/OpenGL/externals/glad/include -I/Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/include -I/Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/src -I/Users/gim-yujin/Desktop/Refer/OpenGL/build/externals/glfw/src
+  OBJECT_DIR = externals/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = externals/glfw/src/CMakeFiles/glfw.dir
 
-build external/glfw/src/CMakeFiles/glfw.dir/cocoa_window.m.o: C_COMPILER__glfw_unscanned_Debug /Users/gim-yujin/Desktop/learn-opengl/external/glfw/src/cocoa_window.m || cmake_object_order_depends_target_glfw
-  DEFINES = -D_GLFW_USE_CONFIG_H
-  DEP_FILE = external/glfw/src/CMakeFiles/glfw.dir/cocoa_window.m.o.d
-  FLAGS = -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -fPIC -Wall
-  INCLUDES = -I/Users/gim-yujin/Desktop/learn-opengl/external/glad/include -I/Users/gim-yujin/Desktop/learn-opengl/external/glfw/include -I/Users/gim-yujin/Desktop/learn-opengl/external/glfw/src -I/Users/gim-yujin/Desktop/learn-opengl/build/external/glfw/src
-  OBJECT_DIR = external/glfw/src/CMakeFiles/glfw.dir
-  OBJECT_FILE_DIR = external/glfw/src/CMakeFiles/glfw.dir
+build externals/glfw/src/CMakeFiles/glfw.dir/null_init.c.o: C_COMPILER__glfw_unscanned_Debug /Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/src/null_init.c || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_COCOA
+  DEP_FILE = externals/glfw/src/CMakeFiles/glfw.dir/null_init.c.o.d
+  FLAGS = -g -std=c99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -fPIC -Wall
+  INCLUDES = -I/Users/gim-yujin/Desktop/Refer/OpenGL/externals/glad/include -I/Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/include -I/Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/src -I/Users/gim-yujin/Desktop/Refer/OpenGL/build/externals/glfw/src
+  OBJECT_DIR = externals/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = externals/glfw/src/CMakeFiles/glfw.dir
 
-build external/glfw/src/CMakeFiles/glfw.dir/cocoa_time.c.o: C_COMPILER__glfw_unscanned_Debug /Users/gim-yujin/Desktop/learn-opengl/external/glfw/src/cocoa_time.c || cmake_object_order_depends_target_glfw
-  DEFINES = -D_GLFW_USE_CONFIG_H
-  DEP_FILE = external/glfw/src/CMakeFiles/glfw.dir/cocoa_time.c.o.d
-  FLAGS = -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -fPIC -Wall
-  INCLUDES = -I/Users/gim-yujin/Desktop/learn-opengl/external/glad/include -I/Users/gim-yujin/Desktop/learn-opengl/external/glfw/include -I/Users/gim-yujin/Desktop/learn-opengl/external/glfw/src -I/Users/gim-yujin/Desktop/learn-opengl/build/external/glfw/src
-  OBJECT_DIR = external/glfw/src/CMakeFiles/glfw.dir
-  OBJECT_FILE_DIR = external/glfw/src/CMakeFiles/glfw.dir
+build externals/glfw/src/CMakeFiles/glfw.dir/null_monitor.c.o: C_COMPILER__glfw_unscanned_Debug /Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/src/null_monitor.c || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_COCOA
+  DEP_FILE = externals/glfw/src/CMakeFiles/glfw.dir/null_monitor.c.o.d
+  FLAGS = -g -std=c99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -fPIC -Wall
+  INCLUDES = -I/Users/gim-yujin/Desktop/Refer/OpenGL/externals/glad/include -I/Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/include -I/Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/src -I/Users/gim-yujin/Desktop/Refer/OpenGL/build/externals/glfw/src
+  OBJECT_DIR = externals/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = externals/glfw/src/CMakeFiles/glfw.dir
 
-build external/glfw/src/CMakeFiles/glfw.dir/posix_thread.c.o: C_COMPILER__glfw_unscanned_Debug /Users/gim-yujin/Desktop/learn-opengl/external/glfw/src/posix_thread.c || cmake_object_order_depends_target_glfw
-  DEFINES = -D_GLFW_USE_CONFIG_H
-  DEP_FILE = external/glfw/src/CMakeFiles/glfw.dir/posix_thread.c.o.d
-  FLAGS = -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -fPIC -Wall
-  INCLUDES = -I/Users/gim-yujin/Desktop/learn-opengl/external/glad/include -I/Users/gim-yujin/Desktop/learn-opengl/external/glfw/include -I/Users/gim-yujin/Desktop/learn-opengl/external/glfw/src -I/Users/gim-yujin/Desktop/learn-opengl/build/external/glfw/src
-  OBJECT_DIR = external/glfw/src/CMakeFiles/glfw.dir
-  OBJECT_FILE_DIR = external/glfw/src/CMakeFiles/glfw.dir
+build externals/glfw/src/CMakeFiles/glfw.dir/null_window.c.o: C_COMPILER__glfw_unscanned_Debug /Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/src/null_window.c || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_COCOA
+  DEP_FILE = externals/glfw/src/CMakeFiles/glfw.dir/null_window.c.o.d
+  FLAGS = -g -std=c99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -fPIC -Wall
+  INCLUDES = -I/Users/gim-yujin/Desktop/Refer/OpenGL/externals/glad/include -I/Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/include -I/Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/src -I/Users/gim-yujin/Desktop/Refer/OpenGL/build/externals/glfw/src
+  OBJECT_DIR = externals/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = externals/glfw/src/CMakeFiles/glfw.dir
 
-build external/glfw/src/CMakeFiles/glfw.dir/nsgl_context.m.o: C_COMPILER__glfw_unscanned_Debug /Users/gim-yujin/Desktop/learn-opengl/external/glfw/src/nsgl_context.m || cmake_object_order_depends_target_glfw
-  DEFINES = -D_GLFW_USE_CONFIG_H
-  DEP_FILE = external/glfw/src/CMakeFiles/glfw.dir/nsgl_context.m.o.d
-  FLAGS = -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -fPIC -Wall
-  INCLUDES = -I/Users/gim-yujin/Desktop/learn-opengl/external/glad/include -I/Users/gim-yujin/Desktop/learn-opengl/external/glfw/include -I/Users/gim-yujin/Desktop/learn-opengl/external/glfw/src -I/Users/gim-yujin/Desktop/learn-opengl/build/external/glfw/src
-  OBJECT_DIR = external/glfw/src/CMakeFiles/glfw.dir
-  OBJECT_FILE_DIR = external/glfw/src/CMakeFiles/glfw.dir
+build externals/glfw/src/CMakeFiles/glfw.dir/null_joystick.c.o: C_COMPILER__glfw_unscanned_Debug /Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/src/null_joystick.c || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_COCOA
+  DEP_FILE = externals/glfw/src/CMakeFiles/glfw.dir/null_joystick.c.o.d
+  FLAGS = -g -std=c99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -fPIC -Wall
+  INCLUDES = -I/Users/gim-yujin/Desktop/Refer/OpenGL/externals/glad/include -I/Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/include -I/Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/src -I/Users/gim-yujin/Desktop/Refer/OpenGL/build/externals/glfw/src
+  OBJECT_DIR = externals/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = externals/glfw/src/CMakeFiles/glfw.dir
 
-build external/glfw/src/CMakeFiles/glfw.dir/egl_context.c.o: C_COMPILER__glfw_unscanned_Debug /Users/gim-yujin/Desktop/learn-opengl/external/glfw/src/egl_context.c || cmake_object_order_depends_target_glfw
-  DEFINES = -D_GLFW_USE_CONFIG_H
-  DEP_FILE = external/glfw/src/CMakeFiles/glfw.dir/egl_context.c.o.d
-  FLAGS = -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -fPIC -Wall
-  INCLUDES = -I/Users/gim-yujin/Desktop/learn-opengl/external/glad/include -I/Users/gim-yujin/Desktop/learn-opengl/external/glfw/include -I/Users/gim-yujin/Desktop/learn-opengl/external/glfw/src -I/Users/gim-yujin/Desktop/learn-opengl/build/external/glfw/src
-  OBJECT_DIR = external/glfw/src/CMakeFiles/glfw.dir
-  OBJECT_FILE_DIR = external/glfw/src/CMakeFiles/glfw.dir
+build externals/glfw/src/CMakeFiles/glfw.dir/cocoa_time.c.o: C_COMPILER__glfw_unscanned_Debug /Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/src/cocoa_time.c || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_COCOA
+  DEP_FILE = externals/glfw/src/CMakeFiles/glfw.dir/cocoa_time.c.o.d
+  FLAGS = -g -std=c99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -fPIC -Wall
+  INCLUDES = -I/Users/gim-yujin/Desktop/Refer/OpenGL/externals/glad/include -I/Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/include -I/Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/src -I/Users/gim-yujin/Desktop/Refer/OpenGL/build/externals/glfw/src
+  OBJECT_DIR = externals/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = externals/glfw/src/CMakeFiles/glfw.dir
 
-build external/glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.o: C_COMPILER__glfw_unscanned_Debug /Users/gim-yujin/Desktop/learn-opengl/external/glfw/src/osmesa_context.c || cmake_object_order_depends_target_glfw
-  DEFINES = -D_GLFW_USE_CONFIG_H
-  DEP_FILE = external/glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.o.d
-  FLAGS = -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -fPIC -Wall
-  INCLUDES = -I/Users/gim-yujin/Desktop/learn-opengl/external/glad/include -I/Users/gim-yujin/Desktop/learn-opengl/external/glfw/include -I/Users/gim-yujin/Desktop/learn-opengl/external/glfw/src -I/Users/gim-yujin/Desktop/learn-opengl/build/external/glfw/src
-  OBJECT_DIR = external/glfw/src/CMakeFiles/glfw.dir
-  OBJECT_FILE_DIR = external/glfw/src/CMakeFiles/glfw.dir
+build externals/glfw/src/CMakeFiles/glfw.dir/posix_module.c.o: C_COMPILER__glfw_unscanned_Debug /Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/src/posix_module.c || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_COCOA
+  DEP_FILE = externals/glfw/src/CMakeFiles/glfw.dir/posix_module.c.o.d
+  FLAGS = -g -std=c99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -fPIC -Wall
+  INCLUDES = -I/Users/gim-yujin/Desktop/Refer/OpenGL/externals/glad/include -I/Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/include -I/Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/src -I/Users/gim-yujin/Desktop/Refer/OpenGL/build/externals/glfw/src
+  OBJECT_DIR = externals/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = externals/glfw/src/CMakeFiles/glfw.dir
+
+build externals/glfw/src/CMakeFiles/glfw.dir/posix_thread.c.o: C_COMPILER__glfw_unscanned_Debug /Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/src/posix_thread.c || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_COCOA
+  DEP_FILE = externals/glfw/src/CMakeFiles/glfw.dir/posix_thread.c.o.d
+  FLAGS = -g -std=c99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -fPIC -Wall
+  INCLUDES = -I/Users/gim-yujin/Desktop/Refer/OpenGL/externals/glad/include -I/Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/include -I/Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/src -I/Users/gim-yujin/Desktop/Refer/OpenGL/build/externals/glfw/src
+  OBJECT_DIR = externals/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = externals/glfw/src/CMakeFiles/glfw.dir
+
+build externals/glfw/src/CMakeFiles/glfw.dir/cocoa_init.m.o: C_COMPILER__glfw_unscanned_Debug /Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/src/cocoa_init.m || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_COCOA
+  DEP_FILE = externals/glfw/src/CMakeFiles/glfw.dir/cocoa_init.m.o.d
+  FLAGS = -g -std=c99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -fPIC -Wall
+  INCLUDES = -I/Users/gim-yujin/Desktop/Refer/OpenGL/externals/glad/include -I/Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/include -I/Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/src -I/Users/gim-yujin/Desktop/Refer/OpenGL/build/externals/glfw/src
+  OBJECT_DIR = externals/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = externals/glfw/src/CMakeFiles/glfw.dir
+
+build externals/glfw/src/CMakeFiles/glfw.dir/cocoa_joystick.m.o: C_COMPILER__glfw_unscanned_Debug /Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/src/cocoa_joystick.m || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_COCOA
+  DEP_FILE = externals/glfw/src/CMakeFiles/glfw.dir/cocoa_joystick.m.o.d
+  FLAGS = -g -std=c99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -fPIC -Wall
+  INCLUDES = -I/Users/gim-yujin/Desktop/Refer/OpenGL/externals/glad/include -I/Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/include -I/Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/src -I/Users/gim-yujin/Desktop/Refer/OpenGL/build/externals/glfw/src
+  OBJECT_DIR = externals/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = externals/glfw/src/CMakeFiles/glfw.dir
+
+build externals/glfw/src/CMakeFiles/glfw.dir/cocoa_monitor.m.o: C_COMPILER__glfw_unscanned_Debug /Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/src/cocoa_monitor.m || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_COCOA
+  DEP_FILE = externals/glfw/src/CMakeFiles/glfw.dir/cocoa_monitor.m.o.d
+  FLAGS = -g -std=c99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -fPIC -Wall
+  INCLUDES = -I/Users/gim-yujin/Desktop/Refer/OpenGL/externals/glad/include -I/Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/include -I/Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/src -I/Users/gim-yujin/Desktop/Refer/OpenGL/build/externals/glfw/src
+  OBJECT_DIR = externals/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = externals/glfw/src/CMakeFiles/glfw.dir
+
+build externals/glfw/src/CMakeFiles/glfw.dir/cocoa_window.m.o: C_COMPILER__glfw_unscanned_Debug /Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/src/cocoa_window.m || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_COCOA
+  DEP_FILE = externals/glfw/src/CMakeFiles/glfw.dir/cocoa_window.m.o.d
+  FLAGS = -g -std=c99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -fPIC -Wall
+  INCLUDES = -I/Users/gim-yujin/Desktop/Refer/OpenGL/externals/glad/include -I/Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/include -I/Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/src -I/Users/gim-yujin/Desktop/Refer/OpenGL/build/externals/glfw/src
+  OBJECT_DIR = externals/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = externals/glfw/src/CMakeFiles/glfw.dir
+
+build externals/glfw/src/CMakeFiles/glfw.dir/nsgl_context.m.o: C_COMPILER__glfw_unscanned_Debug /Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/src/nsgl_context.m || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_COCOA
+  DEP_FILE = externals/glfw/src/CMakeFiles/glfw.dir/nsgl_context.m.o.d
+  FLAGS = -g -std=c99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -fPIC -Wall
+  INCLUDES = -I/Users/gim-yujin/Desktop/Refer/OpenGL/externals/glad/include -I/Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/include -I/Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/src -I/Users/gim-yujin/Desktop/Refer/OpenGL/build/externals/glfw/src
+  OBJECT_DIR = externals/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = externals/glfw/src/CMakeFiles/glfw.dir
 
 
 # =============================================================================
@@ -376,101 +418,107 @@ build external/glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.o: C_COMPILER__glfw
 
 
 #############################################
-# Link the static library external/glfw/src/libglfw3.a
+# Link the static library externals/glfw/src/libglfw3.a
 
-build external/glfw/src/libglfw3.a: C_STATIC_LIBRARY_LINKER__glfw_Debug external/glfw/src/CMakeFiles/glfw.dir/context.c.o external/glfw/src/CMakeFiles/glfw.dir/init.c.o external/glfw/src/CMakeFiles/glfw.dir/input.c.o external/glfw/src/CMakeFiles/glfw.dir/monitor.c.o external/glfw/src/CMakeFiles/glfw.dir/vulkan.c.o external/glfw/src/CMakeFiles/glfw.dir/window.c.o external/glfw/src/CMakeFiles/glfw.dir/cocoa_init.m.o external/glfw/src/CMakeFiles/glfw.dir/cocoa_joystick.m.o external/glfw/src/CMakeFiles/glfw.dir/cocoa_monitor.m.o external/glfw/src/CMakeFiles/glfw.dir/cocoa_window.m.o external/glfw/src/CMakeFiles/glfw.dir/cocoa_time.c.o external/glfw/src/CMakeFiles/glfw.dir/posix_thread.c.o external/glfw/src/CMakeFiles/glfw.dir/nsgl_context.m.o external/glfw/src/CMakeFiles/glfw.dir/egl_context.c.o external/glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.o
+build externals/glfw/src/libglfw3.a: C_STATIC_LIBRARY_LINKER__glfw_Debug externals/glfw/src/CMakeFiles/glfw.dir/context.c.o externals/glfw/src/CMakeFiles/glfw.dir/init.c.o externals/glfw/src/CMakeFiles/glfw.dir/input.c.o externals/glfw/src/CMakeFiles/glfw.dir/monitor.c.o externals/glfw/src/CMakeFiles/glfw.dir/platform.c.o externals/glfw/src/CMakeFiles/glfw.dir/vulkan.c.o externals/glfw/src/CMakeFiles/glfw.dir/window.c.o externals/glfw/src/CMakeFiles/glfw.dir/egl_context.c.o externals/glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.o externals/glfw/src/CMakeFiles/glfw.dir/null_init.c.o externals/glfw/src/CMakeFiles/glfw.dir/null_monitor.c.o externals/glfw/src/CMakeFiles/glfw.dir/null_window.c.o externals/glfw/src/CMakeFiles/glfw.dir/null_joystick.c.o externals/glfw/src/CMakeFiles/glfw.dir/cocoa_time.c.o externals/glfw/src/CMakeFiles/glfw.dir/posix_module.c.o externals/glfw/src/CMakeFiles/glfw.dir/posix_thread.c.o externals/glfw/src/CMakeFiles/glfw.dir/cocoa_init.m.o externals/glfw/src/CMakeFiles/glfw.dir/cocoa_joystick.m.o externals/glfw/src/CMakeFiles/glfw.dir/cocoa_monitor.m.o externals/glfw/src/CMakeFiles/glfw.dir/cocoa_window.m.o externals/glfw/src/CMakeFiles/glfw.dir/nsgl_context.m.o
   ARCH_FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk
   LANGUAGE_COMPILE_FLAGS = -g
-  OBJECT_DIR = external/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_DIR = externals/glfw/src/CMakeFiles/glfw.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_FILE = external/glfw/src/libglfw3.a
+  TARGET_FILE = externals/glfw/src/libglfw3.a
   TARGET_PDB = glfw3.a.dbg
+
+
+#############################################
+# Utility command for update_mappings
+
+build externals/glfw/src/update_mappings: phony externals/glfw/src/CMakeFiles/update_mappings
 
 
 #############################################
 # Utility command for edit_cache
 
-build external/glfw/src/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/gim-yujin/Desktop/learn-opengl/build/external/glfw/src && /opt/homebrew/Cellar/cmake/3.26.0/bin/ccmake -S/Users/gim-yujin/Desktop/learn-opengl -B/Users/gim-yujin/Desktop/learn-opengl/build
+build externals/glfw/src/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/gim-yujin/Desktop/Refer/OpenGL/build/externals/glfw/src && /opt/homebrew/Cellar/cmake/3.26.0/bin/ccmake -S/Users/gim-yujin/Desktop/Refer/OpenGL -B/Users/gim-yujin/Desktop/Refer/OpenGL/build
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
 
-build external/glfw/src/edit_cache: phony external/glfw/src/CMakeFiles/edit_cache.util
+build externals/glfw/src/edit_cache: phony externals/glfw/src/CMakeFiles/edit_cache.util
 
 
 #############################################
 # Utility command for rebuild_cache
 
-build external/glfw/src/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/gim-yujin/Desktop/learn-opengl/build/external/glfw/src && /opt/homebrew/Cellar/cmake/3.26.0/bin/cmake --regenerate-during-build -S/Users/gim-yujin/Desktop/learn-opengl -B/Users/gim-yujin/Desktop/learn-opengl/build
+build externals/glfw/src/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/gim-yujin/Desktop/Refer/OpenGL/build/externals/glfw/src && /opt/homebrew/Cellar/cmake/3.26.0/bin/cmake --regenerate-during-build -S/Users/gim-yujin/Desktop/Refer/OpenGL -B/Users/gim-yujin/Desktop/Refer/OpenGL/build
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
 
-build external/glfw/src/rebuild_cache: phony external/glfw/src/CMakeFiles/rebuild_cache.util
+build externals/glfw/src/rebuild_cache: phony externals/glfw/src/CMakeFiles/rebuild_cache.util
 
 
 #############################################
 # Utility command for list_install_components
 
-build external/glfw/src/list_install_components: phony
+build externals/glfw/src/list_install_components: phony
 
 
 #############################################
 # Utility command for install
 
-build external/glfw/src/CMakeFiles/install.util: CUSTOM_COMMAND external/glfw/src/all
-  COMMAND = cd /Users/gim-yujin/Desktop/learn-opengl/build/external/glfw/src && /opt/homebrew/Cellar/cmake/3.26.0/bin/cmake -P cmake_install.cmake
+build externals/glfw/src/CMakeFiles/install.util: CUSTOM_COMMAND externals/glfw/src/all
+  COMMAND = cd /Users/gim-yujin/Desktop/Refer/OpenGL/build/externals/glfw/src && /opt/homebrew/Cellar/cmake/3.26.0/bin/cmake -P cmake_install.cmake
   DESC = Install the project...
   pool = console
   restat = 1
 
-build external/glfw/src/install: phony external/glfw/src/CMakeFiles/install.util
+build externals/glfw/src/install: phony externals/glfw/src/CMakeFiles/install.util
 
 
 #############################################
 # Utility command for install/local
 
-build external/glfw/src/CMakeFiles/install/local.util: CUSTOM_COMMAND external/glfw/src/all
-  COMMAND = cd /Users/gim-yujin/Desktop/learn-opengl/build/external/glfw/src && /opt/homebrew/Cellar/cmake/3.26.0/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+build externals/glfw/src/CMakeFiles/install/local.util: CUSTOM_COMMAND externals/glfw/src/all
+  COMMAND = cd /Users/gim-yujin/Desktop/Refer/OpenGL/build/externals/glfw/src && /opt/homebrew/Cellar/cmake/3.26.0/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
   DESC = Installing only the local directory...
   pool = console
   restat = 1
 
-build external/glfw/src/install/local: phony external/glfw/src/CMakeFiles/install/local.util
+build externals/glfw/src/install/local: phony externals/glfw/src/CMakeFiles/install/local.util
 
 
 #############################################
 # Utility command for install/strip
 
-build external/glfw/src/CMakeFiles/install/strip.util: CUSTOM_COMMAND external/glfw/src/all
-  COMMAND = cd /Users/gim-yujin/Desktop/learn-opengl/build/external/glfw/src && /opt/homebrew/Cellar/cmake/3.26.0/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+build externals/glfw/src/CMakeFiles/install/strip.util: CUSTOM_COMMAND externals/glfw/src/all
+  COMMAND = cd /Users/gim-yujin/Desktop/Refer/OpenGL/build/externals/glfw/src && /opt/homebrew/Cellar/cmake/3.26.0/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
   DESC = Installing the project stripped...
   pool = console
   restat = 1
 
-build external/glfw/src/install/strip: phony external/glfw/src/CMakeFiles/install/strip.util
+build externals/glfw/src/install/strip: phony externals/glfw/src/CMakeFiles/install/strip.util
 
 
 #############################################
-# Custom command for external/glfw/src/CMakeFiles/update_mappings
+# Custom command for externals/glfw/src/CMakeFiles/update_mappings
 
-build external/glfw/src/CMakeFiles/update_mappings | ${cmake_ninja_workdir}external/glfw/src/CMakeFiles/update_mappings: CUSTOM_COMMAND
-  COMMAND = cd /Users/gim-yujin/Desktop/learn-opengl/external/glfw/src && /opt/homebrew/Cellar/cmake/3.26.0/bin/cmake -P /Users/gim-yujin/Desktop/learn-opengl/external/glfw/CMake/GenerateMappings.cmake mappings.h.in mappings.h
+build externals/glfw/src/CMakeFiles/update_mappings | ${cmake_ninja_workdir}externals/glfw/src/CMakeFiles/update_mappings: CUSTOM_COMMAND
+  COMMAND = cd /Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/src && /opt/homebrew/Cellar/cmake/3.26.0/bin/cmake -P /Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/CMake/GenerateMappings.cmake mappings.h.in mappings.h
   DESC = Updating gamepad mappings from upstream repository
 
 # =============================================================================
 # Target aliases.
 
-build glfw: phony external/glfw/src/libglfw3.a
+build glfw: phony externals/glfw/src/libglfw3.a
 
-build libglfw3.a: phony external/glfw/src/libglfw3.a
+build libglfw3.a: phony externals/glfw/src/libglfw3.a
 
-build uninstall: phony external/glfw/uninstall
+build uninstall: phony externals/glfw/uninstall
 
-build update_mappings: phony external/glfw/src/update_mappings
+build update_mappings: phony externals/glfw/src/update_mappings
 
 # =============================================================================
 # Folder targets.
@@ -478,23 +526,23 @@ build update_mappings: phony external/glfw/src/update_mappings
 # =============================================================================
 
 #############################################
-# Folder: /Users/gim-yujin/Desktop/learn-opengl/build
+# Folder: /Users/gim-yujin/Desktop/Refer/OpenGL/build
 
-build all: phony Learn-OpenGL external/glfw/all
-
-# =============================================================================
-
-#############################################
-# Folder: /Users/gim-yujin/Desktop/learn-opengl/build/external/glfw
-
-build external/glfw/all: phony external/glfw/src/all
+build all: phony Learn-OpenGL externals/glfw/all
 
 # =============================================================================
 
 #############################################
-# Folder: /Users/gim-yujin/Desktop/learn-opengl/build/external/glfw/src
+# Folder: /Users/gim-yujin/Desktop/Refer/OpenGL/build/externals/glfw
 
-build external/glfw/src/all: phony external/glfw/src/libglfw3.a
+build externals/glfw/all: phony externals/glfw/src/all
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/gim-yujin/Desktop/Refer/OpenGL/build/externals/glfw/src
+
+build externals/glfw/src/all: phony externals/glfw/src/libglfw3.a
 
 # =============================================================================
 # Built-in targets
@@ -503,14 +551,14 @@ build external/glfw/src/all: phony external/glfw/src/libglfw3.a
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /Users/gim-yujin/Desktop/learn-opengl/CMakeLists.txt /Users/gim-yujin/Desktop/learn-opengl/external/glfw/CMakeLists.txt /Users/gim-yujin/Desktop/learn-opengl/external/glfw/cmake_uninstall.cmake.in /Users/gim-yujin/Desktop/learn-opengl/external/glfw/src/CMakeLists.txt /Users/gim-yujin/Desktop/learn-opengl/external/glfw/src/glfw3.pc.in /Users/gim-yujin/Desktop/learn-opengl/external/glfw/src/glfw3Config.cmake.in /Users/gim-yujin/Desktop/learn-opengl/external/glfw/src/glfw_config.h.in /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/BasicConfigVersion-SameMajorVersion.cmake.in /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/CMakeCInformation.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/CMakeCXXInformation.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/CMakeDependentOption.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/CMakeGenericSystem.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/CMakeInitializeConfigs.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/CMakeLanguageInformation.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/CMakePackageConfigHelpers.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/CheckCSourceCompiles.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/CheckIncludeFile.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/CheckLibraryExists.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/Compiler/AppleClang-C.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/Compiler/AppleClang-CXX.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/Compiler/Clang.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/Compiler/GNU.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/FindOpenGL.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/FindPackageHandleStandardArgs.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/FindPackageMessage.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/FindThreads.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/GNUInstallDirs.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/Internal/CheckSourceCompiles.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/Platform/Apple-AppleClang-C.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/Platform/Apple-AppleClang-CXX.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/Platform/Apple-Clang-C.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/Platform/Apple-Clang-CXX.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/Platform/Apple-Clang.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/Platform/Darwin-Initialize.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/Platform/Darwin.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/Platform/UnixPaths.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles/3.26.0/CMakeCCompiler.cmake CMakeFiles/3.26.0/CMakeCXXCompiler.cmake CMakeFiles/3.26.0/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | /Users/gim-yujin/Desktop/Refer/OpenGL/CMakeLists.txt /Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/CMake/cmake_uninstall.cmake.in /Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/CMake/glfw3.pc.in /Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/CMake/glfw3Config.cmake.in /Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/CMakeLists.txt /Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/src/CMakeLists.txt /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/BasicConfigVersion-SameMajorVersion.cmake.in /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/CMakeCInformation.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/CMakeCXXInformation.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/CMakeDependentOption.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/CMakeGenericSystem.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/CMakeInitializeConfigs.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/CMakeLanguageInformation.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/CMakePackageConfigHelpers.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/CheckCSourceCompiles.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/CheckIncludeFile.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/CheckLibraryExists.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/Compiler/AppleClang-C.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/Compiler/AppleClang-CXX.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/Compiler/Clang.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/Compiler/GNU.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/FindOpenGL.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/FindPackageHandleStandardArgs.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/FindPackageMessage.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/FindThreads.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/GNUInstallDirs.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/Internal/CheckSourceCompiles.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/Platform/Apple-AppleClang-C.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/Platform/Apple-AppleClang-CXX.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/Platform/Apple-Clang-C.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/Platform/Apple-Clang-CXX.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/Platform/Apple-Clang.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/Platform/Darwin-Initialize.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/Platform/Darwin.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/Platform/UnixPaths.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles/3.26.0/CMakeCCompiler.cmake CMakeFiles/3.26.0/CMakeCXXCompiler.cmake CMakeFiles/3.26.0/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /Users/gim-yujin/Desktop/learn-opengl/CMakeLists.txt /Users/gim-yujin/Desktop/learn-opengl/external/glfw/CMakeLists.txt /Users/gim-yujin/Desktop/learn-opengl/external/glfw/cmake_uninstall.cmake.in /Users/gim-yujin/Desktop/learn-opengl/external/glfw/src/CMakeLists.txt /Users/gim-yujin/Desktop/learn-opengl/external/glfw/src/glfw3.pc.in /Users/gim-yujin/Desktop/learn-opengl/external/glfw/src/glfw3Config.cmake.in /Users/gim-yujin/Desktop/learn-opengl/external/glfw/src/glfw_config.h.in /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/BasicConfigVersion-SameMajorVersion.cmake.in /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/CMakeCInformation.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/CMakeCXXInformation.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/CMakeDependentOption.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/CMakeGenericSystem.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/CMakeInitializeConfigs.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/CMakeLanguageInformation.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/CMakePackageConfigHelpers.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/CheckCSourceCompiles.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/CheckIncludeFile.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/CheckLibraryExists.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/Compiler/AppleClang-C.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/Compiler/AppleClang-CXX.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/Compiler/Clang.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/Compiler/GNU.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/FindOpenGL.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/FindPackageHandleStandardArgs.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/FindPackageMessage.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/FindThreads.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/GNUInstallDirs.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/Internal/CheckSourceCompiles.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/Platform/Apple-AppleClang-C.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/Platform/Apple-AppleClang-CXX.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/Platform/Apple-Clang-C.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/Platform/Apple-Clang-CXX.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/Platform/Apple-Clang.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/Platform/Darwin-Initialize.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/Platform/Darwin.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/Platform/UnixPaths.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles/3.26.0/CMakeCCompiler.cmake CMakeFiles/3.26.0/CMakeCXXCompiler.cmake CMakeFiles/3.26.0/CMakeSystem.cmake: phony
+build /Users/gim-yujin/Desktop/Refer/OpenGL/CMakeLists.txt /Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/CMake/cmake_uninstall.cmake.in /Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/CMake/glfw3.pc.in /Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/CMake/glfw3Config.cmake.in /Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/CMakeLists.txt /Users/gim-yujin/Desktop/Refer/OpenGL/externals/glfw/src/CMakeLists.txt /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/BasicConfigVersion-SameMajorVersion.cmake.in /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/CMakeCInformation.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/CMakeCXXInformation.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/CMakeDependentOption.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/CMakeGenericSystem.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/CMakeInitializeConfigs.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/CMakeLanguageInformation.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/CMakePackageConfigHelpers.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/CheckCSourceCompiles.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/CheckIncludeFile.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/CheckLibraryExists.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/Compiler/AppleClang-C.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/Compiler/AppleClang-CXX.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/Compiler/Clang.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/Compiler/GNU.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/FindOpenGL.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/FindPackageHandleStandardArgs.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/FindPackageMessage.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/FindThreads.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/GNUInstallDirs.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/Internal/CheckSourceCompiles.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/Platform/Apple-AppleClang-C.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/Platform/Apple-AppleClang-CXX.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/Platform/Apple-Clang-C.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/Platform/Apple-Clang-CXX.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/Platform/Apple-Clang.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/Platform/Darwin-Initialize.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/Platform/Darwin.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/Platform/UnixPaths.cmake /opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles/3.26.0/CMakeCCompiler.cmake CMakeFiles/3.26.0/CMakeCXXCompiler.cmake CMakeFiles/3.26.0/CMakeSystem.cmake: phony
 
 
 #############################################

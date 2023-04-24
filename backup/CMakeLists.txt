@@ -13,8 +13,8 @@ message("OPENGL_INCLUDE_DIR ${OPENGL_INCLUDE_DIR}")
 set(GLFW_BUILD_DOCS OFF CACHE BOOL "" FORCE)
 set(GLFW_BUILD_TESTS OFF CACHE BOOL "" FORCE)
 set(GLFW_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
-add_subdirectory(../external/glfw)
-include_directories(../external/glfw/include)
+add_subdirectory(../externals/glfw)
+include_directories(../externals/glfw/include)
 
 # External - assimp
 set(ASSIMP_BUILD_ASSIMP_TOOLS OFF CACHE BOOL "" FORCE)
@@ -22,17 +22,17 @@ set(ASSIMP_BUILD_SAMPLES OFF CACHE BOOL "" FORCE)
 set(ASSIMP_NO_EXPORT ON CACHE BOOL "" FORCE)
 set(ASSIMP_BUILD_ALL_IMPORTERS_BY_DEFAULT OFF CACHE BOOL "" FORCE)
 set(ASSIMP_BUILD_OBJ_IMPORTER ON CACHE BOOL "" FORCE)
-add_subdirectory(../external/assimp)
-include_directories(../external/assimp/include)
+add_subdirectory(../externals/assimp)
+include_directories(../externals/assimp/include)
 
 # External - glm
-set(GLM_DIR ../external/glm/cmake/glm)
+set(GLM_DIR ../externals/glm/cmake/glm)
 find_package(GLM REQUIRED)
 include_directories(${GLM_INCLUDE_DIRS})
 
 # External - glad
-include_directories(../external/glad/include)
-add_library(glad ../external/glad/src/glad.c)
+include_directories(../externals/glad/include)
+add_library(glad ../externals/glad/src/glad.c)
 
 # Targets
 add_executable(learn-opengl main.cpp)
