@@ -1,40 +1,27 @@
-# Learn OpneGL
+## Learn OpneGL
 
-[Learn OpenGL](https://learnopengl.com/) 사이트에서 보고, 듣고, 느끼고, 배우는 것들을 기록
+[Learn OpenGL](https://learnopengl.com/) 사이트 공부용
 
 
-# Prerequisite
+## Prerequisite
 
 | Library | Version |
 |:--------|--------:|
 | GLAD    |     3.3 |
 | GLFW    |   3.3.8 |
 | GLM     | 0.9.9.8 |
+| ASSIMP  |   5.2.5 | 
 
 
-# Build
+## Build
 
-JesBrains의 CLion에서 빌드
-
+- Install CMake for Windows
+- Install MinGW 64-bit for Windows
+- Install ninja.exe and add to **System Path**
 - Clone OpenGL project
+- Build CMake
 ```commandline
-$ git clone git@github.com:habijung/learn-opengl.git
-$ git submodule update --init --recursive
+$ cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=ninja -G Ninja -S . -B build
+$ cmake --build build --target Learn-OpenGL -j 12
 ```
-
-- Update Libraries Tag
-```commandline
-# GLFW
-$ cd externals/glfw
-$ git checkout tags/3.3.8
-
-# GLM
-$ cd externals/glm
-$ git checkout tags/0.9.9.8
-
-# ASSIMP
-# 추가 예정
-```
-
-- CLion에서 프로젝트 폴더 열기
-- Run Project
+- Run `build/Learn-OpenGL.exe`
