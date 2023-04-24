@@ -24,9 +24,8 @@ add_executable(${PROJECT_NAME}
         externals/glad/src/glad.c
 
         # src/1.Getting-Started/1.1.Hello-Window.cpp
-        src/1.Getting-Started/1.2.Hello-Triangle.cpp
-
-        # src/1.Getting-Started/1.3.Shaders.cpp
+        # src/1.Getting-Started/1.2.Hello-Triangle.cpp
+        src/1.Getting-Started/1.3.Shaders.cpp
 )
 target_link_libraries(${PROJECT_NAME}
         OpenGL::GL
