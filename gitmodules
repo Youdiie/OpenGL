@@ -1,0 +1,9 @@
+[submodule "externals/glfw"]
+	path = externals/glfw
+	url = git@github.com:glfw/glfw.git
+[submodule "externals/glm"]
+	path = externals/glm
+	url = git@github.com:g-truc/glm.git
+[submodule "externals/assimp"]
+	path = externals/assimp
+	url = git@github.com:assimp/assimp.git
