@@ -119,9 +119,12 @@ int main()
     // }
     // glDeleteShader(vertexShader);
     // glDeleteShader(fragmentShader);
-    Shader ourShader("./Desktop/Refer/OpenGL/shaders/shader.vs", "./Desktop/Refer/OpenGL/shaders/shader.fs");
 
     // Shader Settings
+    string dirPath = "./Desktop/Refer/OpenGL/shaders/";
+    string vertexPath = dirPath + "shader.vs";
+    string fragmentPath = dirPath + "shader.fs";
+    Shader ourShader(vertexPath.c_str(), fragmentPath.c_str());
 
     /* Set up vertex & index data */
     float vertices[] = {

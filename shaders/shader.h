@@ -22,6 +22,19 @@ public:
     // constructor reads and builds the shader
     Shader(const char *vertexPath, const char *fragmentPath)
     {
+        // 파일 경로 확인
+        // const char *dir = vertexPath;
+        // struct stat sb;
+        // if (stat(dir, &sb) == 0)
+        //     cout << dir << "The path is valid!" << std::endl;
+        // else
+        //     cout << dir << "The Path is invalid!" << std::endl;
+
+        // 현재 디렉토리 확인
+        // char tmp[256];
+        // getcwd(tmp, 256);
+        // cout << "Current working directory: " << tmp << endl;
+
         // 1. 파일 경로에서 vertex/fragment source code를 가져옴
         std::string vertexCode;
         std::string fragmentCode;
@@ -30,28 +43,10 @@ public:
         // ifstream 객체가 exception을 던지는지 확인
         vShaderFile.exceptions(std::ifstream::failbit | std::ifstream::badbit);
         fShaderFile.exceptions(std::ifstream::failbit | std::ifstream::badbit);
-
-        const char *dir = vertexPath;
-
-        // Structure which would store the metadata
-        struct stat sb;
-        if (stat(dir, &sb) == 0)
-            cout << dir << "The path is valid!" << std::endl;
-        else
-            cout << dir << "The Path is invalid!" << std::endl;
-
-        // std::cout << "Current path is " << fs::current_path() << std::endl;
-        char tmp[256];
-        getcwd(tmp, 256);
-        cout << "Current working directory: " << tmp << endl;
-
-        std::cout << vertexPath << std::endl;
         try
         {
             // 파일 열기
             vShaderFile.open(vertexPath);
-            std::cout << vertexPath << std::endl;
-
             fShaderFile.open(fragmentPath);
             std::stringstream vShaderStream, fShaderStream;
             // file buffer를 stream에 넣기
