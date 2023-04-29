@@ -108,10 +108,12 @@ int main()
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     glBindVertexArray(0);
 
+    /// ------------------------------------
     /// Texture Settings
-    unsigned int texture;
-    glGenTextures(1, &texture);            // texture object를 생성하기 위한 id를 생성
-    glBindTexture(GL_TEXTURE_2D, texture); // texture object를 type에 맞게 바인딩
+    unsigned int texture1, texture2;
+    // textue1
+    glGenTextures(1, &texture1);            // texture object를 생성하기 위한 id를 생성
+    glBindTexture(GL_TEXTURE_2D, texture1); // texture object를 type에 맞게 바인딩
     // texture wrapping/filtering 옵션 설정
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);     // x축 wrapping
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);     // y축 wrapping
@@ -121,6 +123,8 @@ int main()
     string dirImgPath = "./Desktop/Refer/OpenGL/img/";
     string imgPath = dirImgPath + "container.jpg";
     int width, height, nrChannels;
+    stbi_set_flip_vertically_on_load(true); // stb_image.h에 의해 이미지가 y축 반전되어 로드되기 때문에, 이를 방지하기 위해 y축 반전
+
     unsigned char *data = stbi_load(imgPath.c_str(), &width, &height, &nrChannels, 0);
     if (data)
     {
@@ -133,6 +137,35 @@ int main()
     }
     stbi_image_free(data); // image data를 메모리에서 해제
 
+    // textue2
+    glGenTextures(1, &texture2);
+    glBindTexture(GL_TEXTURE_2D, texture2);
+    // texture wrapping/filtering 옵션 설정
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    // image 로드, 생성
+    string imgPath2 = dirImgPath + "awesomeface.png";
+    data = stbi_load(imgPath2.c_str(), &width, &height, &nrChannels, 0);
+    if (data)
+    {
+        // png 파일은 투명도를 가지고 있기 때문에, RGBA로 설정
+        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, data);
+        glGenerateMipmap(GL_TEXTURE_2D);
+    }
+    else
+    {
+        std::cout << "Failed to load texture" << std::endl;
+    }
+    stbi_image_free(data); // image data를 메모리에서 해제
+
+    // OpenGL에게 각각의 texture unit에 대한 texture object를 지정
+    ourShader.use();
+    glUniform1i(glGetUniformLocation(ourShader.ID, "texture1"), 0); // texture unit 0을 사용하는 texture1 uniform에 0을 할당
+    ourShader.setInt("texture2", 1);
+
+    // ------------------------------------
     /* Render Loop */
     while (!glfwWindowShouldClose(window))
     {
@@ -143,7 +176,11 @@ int main()
         glClear(GL_COLOR_BUFFER_BIT);
 
         // texture 바인딩
-        glBindTexture(GL_TEXTURE_2D, texture);
+        // glBindTexture(GL_TEXTURE_2D, texture);
+        glActiveTexture(GL_TEXTURE0); // texture unit 0을 활성화
+        glBindTexture(GL_TEXTURE_2D, texture1);
+        glActiveTexture(GL_TEXTURE1); // texture unit 1을 활성화
+        glBindTexture(GL_TEXTURE_2D, texture2);
 
         // shader.h를 통해서 shaderProgram을 활성화
         ourShader.use();
