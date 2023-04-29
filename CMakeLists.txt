@@ -26,7 +26,8 @@ add_executable(${PROJECT_NAME}
 
         # src/1.Getting-Started/1.1.Hello-Window.cpp
         # src/1.Getting-Started/1.2.Hello-Triangle.cpp
-        src/1.Getting-Started/1.3.Shaders.cpp
+        # src/1.Getting-Started/1.3.Shaders.cpp
+        src/1.Getting-Started/1.4.Textures.cpp
 )
 target_link_libraries(${PROJECT_NAME}
         OpenGL::GL
