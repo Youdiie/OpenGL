@@ -122,8 +122,8 @@ int main()
 
     // Shader Settings
     string dirPath = "./Desktop/Refer/OpenGL/shaders/";
-    string vertexPath = dirPath + "shader.vs";
-    string fragmentPath = dirPath + "shader.fs";
+    string vertexPath = dirPath + "3.1.shader.vs";
+    string fragmentPath = dirPath + "3.1.shader.fs";
     Shader ourShader(vertexPath.c_str(), fragmentPath.c_str());
 
     /* Set up vertex & index data */

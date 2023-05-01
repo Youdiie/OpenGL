@@ -17,6 +17,8 @@ add_subdirectory(externals/glfw)
 include_directories(externals/glfw)
 
 # GLM
+add_subdirectory(externals/glm)
+include_directories(externals/glm)
 
 # ASSIMP
 
@@ -27,7 +29,8 @@ add_executable(${PROJECT_NAME}
         # src/1.Getting-Started/1.1.Hello-Window.cpp
         # src/1.Getting-Started/1.2.Hello-Triangle.cpp
         # src/1.Getting-Started/1.3.Shaders.cpp
-        src/1.Getting-Started/1.4.Textures.cpp
+        # src/1.Getting-Started/1.4.Textures.cpp
+        src/1.Getting-Started/1.5.Transformations.cpp
 )
 target_link_libraries(${PROJECT_NAME}
         OpenGL::GL
