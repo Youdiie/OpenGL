@@ -31,7 +31,8 @@ add_executable(${PROJECT_NAME}
         # src/1.Getting-Started/1.3.Shaders.cpp
         # src/1.Getting-Started/1.4.Textures.cpp
         # src/1.Getting-Started/1.5.Transformations.cpp
-        src/1.Getting-Started/1.6.Coordinate-Systems.cpp
+        # src/1.Getting-Started/1.6.Coordinate-Systems.cpp
+        src/1.Getting-Started/1.7.Camera.cpp
 )
 target_link_libraries(${PROJECT_NAME}
         OpenGL::GL
