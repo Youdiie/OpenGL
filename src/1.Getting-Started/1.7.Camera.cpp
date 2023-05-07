@@ -55,7 +55,7 @@ int main()
 #endif
 
     /* Window object 생성 */
-    GLFWwindow *window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "Shaders", NULL, NULL);
+    GLFWwindow *window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "Camera", NULL, NULL);
     if (window == NULL)
     {
         cout << "Failed to creat GLFW window" << endl;
@@ -292,8 +292,8 @@ int main()
             model = glm::translate(model, cubePositions[i]);
             float angle = 20.0f * i;
             model = glm::rotate(model, (float)glfwGetTime() * glm::radians(angle), glm::vec3(1.0f, 0.3f, 0.5f));
-            ourShader.setMat4("model", model);
-            // ourShader.setMat4("model", trans * model);
+            // ourShader.setMat4("model", model);
+            ourShader.setMat4("model", trans * model);
 
             glDrawArrays(GL_TRIANGLES, 0, 36);
         }
