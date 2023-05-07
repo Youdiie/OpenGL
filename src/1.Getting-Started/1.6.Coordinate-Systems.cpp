@@ -237,11 +237,11 @@ int main()
         glBindTexture(GL_TEXTURE_2D, texture2);
 
         // transformations
-        // glm::mat4 trans = glm::mat4(1.0f); // 단위 행렬(identity matrix)로 초기 설정
-        // trans = glm::translate(trans, glm::vec3(0.5f, -0.5f, 0.0f));
-        // // trans = glm::rotate(trans, glm::radians(90.0f), glm::vec3(0.0f, 0.0f, 1.0f));
-        // trans = glm::rotate(trans, (float)glfwGetTime(), glm::vec3(0.0f, 0.0f, 1.0f));
-        // trans = glm::scale(trans, glm::vec3(0.5, 0.7, 0.8));
+        glm::mat4 trans = glm::mat4(1.0f); // 단위 행렬(identity matrix)로 초기 설정
+        trans = glm::translate(trans, glm::vec3(0.5f, -0.5f, 0.0f));
+        // trans = glm::rotate(trans, glm::radians(90.0f), glm::vec3(0.0f, 0.0f, 1.0f));
+        trans = glm::rotate(trans, (float)glfwGetTime(), glm::vec3(0.0f, 0.0f, 1.0f));
+        trans = glm::scale(trans, glm::vec3(0.5, 0.7, 0.8));
 
         // shader.h를 통해서 shaderProgram을 활성화
         ourShader.use();
@@ -270,7 +270,8 @@ int main()
             model = glm::translate(model, cubePositions[i]);
             float angle = 20.0f * i;
             model = glm::rotate(model, (float)glfwGetTime() * glm::radians(angle), glm::vec3(1.0f, 0.3f, 0.5f));
-            ourShader.setMat4("model", model);
+            // ourShader.setMat4("model", model);
+            ourShader.setMat4("model", trans * model);
 
             glDrawArrays(GL_TRIANGLES, 0, 36);
         }
