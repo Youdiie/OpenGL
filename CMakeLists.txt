@@ -35,7 +35,8 @@ add_executable(${PROJECT_NAME}
         # src/1.Getting-Started/1.7.Camera.cpp
         # src/2.Lighting/2.1.Colors.cpp
         # src/2.Lighting/2.2.Basic-Lighting.cpp
-        src/2.Lighting/2.3.Materials.cpp
+        # src/2.Lighting/2.3.Materials.cpp
+        src/2.Lighting/2.4.Lighting-maps.cpp
 )
 target_link_libraries(${PROJECT_NAME}
         OpenGL::GL
