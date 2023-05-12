@@ -240,10 +240,15 @@ int main()
         lightCubeShader.use();
         lightCubeShader.setMat4("projection", projection);
         lightCubeShader.setMat4("view", view);
+        // transformations
+        glm::mat4 trans = glm::mat4(1.0f); // 단위 행렬(identity matrix)로 초기 설정
+        float angle = glm::radians(2.0f);
+        trans = glm::rotate(trans, angle, glm::vec3(0.0f, 1.0f, 0.0f));
+        lightPos = trans * glm::vec4(lightPos, 1.0f);
         model = glm::mat4(1.0f);
         model = glm::translate(model, lightPos);    // light의 위치로 이동
         model = glm::scale(model, glm::vec3(0.2f)); // 크기 조정
-        lightCubeShader.setMat4("model", model);
+        lightCubeShader.setMat4("model", trans * model);
 
         glBindVertexArray(lightCubeVAO);
         glDrawArrays(GL_TRIANGLES, 0, 36);
