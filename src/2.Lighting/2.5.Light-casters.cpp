@@ -36,7 +36,7 @@ float lastFrame = 0.0f;
 
 // lighting
 // glm::vec3 lightPos(1.2f, 1.0f, 2.0f);
-glm::vec3 lightPos(0.2f, 0.1f, 2.0f);
+// glm::vec3 lightPos(0.2f, 0.1f, 2.0f);
 
 /* Main */
 int main()
@@ -172,6 +172,7 @@ int main()
 
     // VBO는 재사용
     glBindBuffer(GL_ARRAY_BUFFER, VBO);
+
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void *)0);
     glEnableVertexAttribArray(0);
 
@@ -203,6 +204,14 @@ int main()
         /// first cube
         // light properties
         lightingShader.use();
+        glm::vec3 lightPos(0.2f, 0.1f, 2.0f);
+        // transformations
+        glm::mat4 trans = glm::mat4(1.0f); // 단위 행렬(identity matrix)로 초기 설정
+        float angle = (float)glfwGetTime();
+        trans = glm::rotate(trans, angle, glm::vec3(0.0f, 1.0f, 0.0f));
+        trans = glm::scale(trans, glm::vec3(1.5f));
+        lightPos = trans * glm::vec4(lightPos, 1.0f);
+
         lightingShader.setVec3("light.position", lightPos);
         // lightingShader.setVec3("light.direction", -0.2f, -1.0f, -0.3f);
         lightingShader.setVec3("viewPos", camera.Position);
@@ -234,7 +243,7 @@ int main()
         glBindTexture(GL_TEXTURE_2D, specularMap);
 
         // transformations
-        glm::mat4 trans = glm::mat4(1.0f); // 단위 행렬(identity matrix)로 초기 설정
+        trans = glm::mat4(1.0f); // 단위 행렬(identity matrix)로 초기 설정
         trans = glm::rotate(trans, (float)glfwGetTime(), glm::vec3(0.0f, 0.0f, 1.0f));
 
         // render the cube
@@ -259,7 +268,6 @@ int main()
         model = glm::mat4(1.0f);
         model = glm::translate(model, lightPos);    // light의 위치로 이동
         model = glm::scale(model, glm::vec3(0.2f)); // 크기 조정
-        // lightCubeShader.setMat4("model", trans * model);
         lightCubeShader.setMat4("model", model);
 
         glBindVertexArray(lightCubeVAO);
