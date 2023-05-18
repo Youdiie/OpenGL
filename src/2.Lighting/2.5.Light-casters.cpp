@@ -212,10 +212,10 @@ int main()
         trans = glm::scale(trans, glm::vec3(1.5f));
         lightPos = trans * glm::vec4(lightPos, 1.0f);
 
-        lightingShader.setVec3("light.position", lightPos);
-        lightingShader.setVec3("light.direction", -0.2f, -1.0f, -0.3f);
         // lightingShader.setVec3("light.position", camera.Position);
         // lightingShader.setVec3("light.direction", camera.Front);
+        lightingShader.setVec3("light.position", lightPos); // camera 대신 light를 기준으로 spotlight 설정
+        lightingShader.setVec3("light.direction", -0.2f, -1.0f, -0.3f);
         lightingShader.setFloat("light.cutOff", glm::cos(glm::radians(12.5f)));
         lightingShader.setFloat("light.outerCutOff", glm::cos(glm::radians(17.5f)));
         lightingShader.setVec3("viewPos", camera.Position);

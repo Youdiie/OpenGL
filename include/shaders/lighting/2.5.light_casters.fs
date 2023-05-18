@@ -36,7 +36,13 @@ void main()
     // vec3 lightDir = normalize(light.position - FragPos);
 
     // if (theta > light.cutoff) // cosine 값이기 때문에 > 일때가 범위 내
+    // {}
+    // else
     // {
+    //     // else, use ambitent light so scene isn't completely dark outside the spotlight.
+    //     FragColor = vec4(vec3(texture(material.diffuse, TexCoords)) * light.ambient, 1.0);
+    // }
+    
     // ambient
     vec3 ambient = vec3(texture(material.diffuse, TexCoords)) * light.ambient;
 
@@ -67,12 +73,7 @@ void main()
 
     vec3 result = (ambient + diffuse + specular) * attenuation;
     FragColor = vec4(result, 1.0);
-    // }
-    // else
-    // {
-    //     // else, use ambitent light so scene isn't completely dark outside the spotlight.
-    //     FragColor = vec4(vec3(texture(material.diffuse, TexCoords)) * light.ambient, 1.0);
-    // }
+    
     
     
 }
