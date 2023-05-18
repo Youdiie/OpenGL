@@ -37,7 +37,8 @@ add_executable(${PROJECT_NAME}
         # src/2.Lighting/2.2.Basic-Lighting.cpp
         # src/2.Lighting/2.3.Materials.cpp
         # src/2.Lighting/2.4.Lighting-maps.cpp
-        src/2.Lighting/2.5.Light-casters.cpp
+        # src/2.Lighting/2.5.Light-casters.cpp
+        src/2.Lighting/2.6.Multiple-lights.cpp
 )
 target_link_libraries(${PROJECT_NAME}
         OpenGL::GL
