@@ -81,8 +81,8 @@ int main()
     string vertexPath = dirPath + "2.6.multiple_lights.vs";
     string fragmentPath = dirPath + "2.6.multiple_lights.fs";
     Shader lightingShader(vertexPath.c_str(), fragmentPath.c_str());
-    vertexPath = dirPath + "2.1.light_cube.vs";
-    fragmentPath = dirPath + "2.1.light_cube.fs";
+    vertexPath = dirPath + "2.6.light_cube.vs";
+    fragmentPath = dirPath + "2.6.light_cube.fs";
     Shader lightCubeShader(vertexPath.c_str(), fragmentPath.c_str());
 
     // Z-buffer를 활성화
@@ -150,6 +150,12 @@ int main()
         glm::vec3(2.3f, -3.3f, -4.0f),
         glm::vec3(-4.0f, 2.0f, -12.0f),
         glm::vec3(0.0f, 0.0f, -3.0f)};
+    // colors of the point lights
+    glm::vec3 pointLightColors[] = {
+        glm::vec3(1.0f, 0.6f, 0.0f),
+        glm::vec3(1.0f, 0.8f, 0.1f),
+        glm::vec3(0.4f, 0.7f, 0.2f),
+        glm::vec3(0.1f, 0.1f, 1.0f)};
 
     /* Set up buffers */
     // first, cube의 VAO와 VBO를 설정
@@ -262,10 +268,10 @@ int main()
         trans = glm::rotate(trans, angle, glm::vec3(0.0f, 1.0f, 0.0f));
         trans = glm::scale(trans, glm::vec3(1.5f));
         lightPos = trans * glm::vec4(lightPos, 1.0f);
-        lightingShader.setVec3("spotLight.position", camera.Position);
-        lightingShader.setVec3("spotLight.direction", camera.Front);
-        // lightingShader.setVec3("spotLight.position", lightPos); // camera 대신 light를 기준으로 spotlight 설정
-        // lightingShader.setVec3("spotLight.direction", -0.2f, -1.0f, -0.3f);
+        // lightingShader.setVec3("spotLight.position", camera.Position);
+        // lightingShader.setVec3("spotLight.direction", camera.Front);
+        lightingShader.setVec3("spotLight.position", lightPos); // camera 대신 light를 기준으로 spotlight 설정
+        lightingShader.setVec3("spotLight.direction", 0.2f, 1.0f, 0.3f);
         lightingShader.setFloat("spotLight.cutOff", glm::cos(glm::radians(12.5f)));
         lightingShader.setFloat("spotLight.outerCutOff", glm::cos(glm::radians(17.5f)));
         lightingShader.setVec3("spotLight.ambient", 0.2f, 0.2f, 0.2f);
@@ -325,6 +331,7 @@ int main()
             model = glm::translate(model, pointLightPositions[i]); // light의 위치로 이동
             model = glm::scale(model, glm::vec3(0.2f));            // 크기 조정
             lightCubeShader.setMat4("model", model);
+            lightCubeShader.setVec3("lightColor", pointLightColors[i]);
 
             glDrawArrays(GL_TRIANGLES, 0, 36);
         }
@@ -333,6 +340,7 @@ int main()
         model = glm::translate(model, lightPos);    // light의 위치로 이동
         model = glm::scale(model, glm::vec3(0.2f)); // 크기 조정
         lightCubeShader.setMat4("model", model);
+        lightCubeShader.setVec3("lightColor", 1.0f, 1.0f, 1.0f);
         glDrawArrays(GL_TRIANGLES, 0, 36);
 
         glfwSwapBuffers(window);

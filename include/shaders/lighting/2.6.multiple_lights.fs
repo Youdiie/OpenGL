@@ -136,5 +136,5 @@ vec3 CalcSpotLight(SpotLight light, vec3 normal, vec3 fragPos, vec3 viewDir)
     diffuse *= intensity;
     specular *= intensity;
 
-    return (ambient + diffuse + specular) * attenuation;
+    return (ambient + diffuse + specular) * attenuation * 10;
 }

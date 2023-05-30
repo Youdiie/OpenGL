@@ -21,6 +21,9 @@ add_subdirectory(externals/glm)
 include_directories(externals/glm)
 
 # ASSIMP
+set(ASSIMP_BUILD_TESTS OFF CACHE BOOL "" FORCE)
+add_subdirectory(externals/assimp)
+include_directories(externals/assimp)
 
 # Project execute
 add_executable(${PROJECT_NAME}
@@ -38,9 +41,11 @@ add_executable(${PROJECT_NAME}
         # src/2.Lighting/2.3.Materials.cpp
         # src/2.Lighting/2.4.Lighting-maps.cpp
         # src/2.Lighting/2.5.Light-casters.cpp
-        src/2.Lighting/2.6.Multiple-lights.cpp
+        # src/2.Lighting/2.6.Multiple-lights.cpp
+        src/3.Model-Loading/3.1.Model-loading.cpp
 )
 target_link_libraries(${PROJECT_NAME}
         OpenGL::GL
         glfw
+        assimp
 )
